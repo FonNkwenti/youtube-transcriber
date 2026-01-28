@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcriber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>YouTube Transcriber</h1>
+            <p>Convert videos to text instantly</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input type="text" id="urlInput" placeholder="Paste YouTube URL here..." />
+                <button id="transcribeBtn">Transcribe</button>
+            </div>
+
+            <div id="statusMessage" class="status-message"></div>
+
+            <div id="resultCard" class="result-card hidden">
+                <div class="card-header">
+                    <h2 id="videoTitle">Video Title</h2>
+                    <div class="header-actions">
+                        <button id="copyBtn" class="icon-btn" title="Copy to Clipboard">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <span>Copy</span>
+                        </button>
+                        <span class="badge success">Success</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="file-path" id="filePath">File saved to: /path/to/file.txt</p>
+                    <h3>Transcript</h3>
+                    <div class="transcript-box">
+                        <pre id="transcriptText">Lorem ipsum...</pre>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="secondary-btn" id="openFileBtn">Open File Location</button>
+                </div>
+            </div>
+        </main>
+
+        <section class="history-section">
+            <h3>Recent Transcripts</h3>
+            <div id="historyList" class="history-list">
+                <!-- History items will be injected here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

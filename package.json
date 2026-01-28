@@ -1,0 +1,26 @@
+{
+  "name": "youtube-transcriber",
+  "version": "1.0.0",
+  "description": "A simple Python script to fetch transcripts from YouTube videos and save them as text files.",
+  "main": "main.js",
+  "scripts": {
+    "start": "ELECTRON_RUN_AS_NODE= electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FonNkwenti/youtube-transcriber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/FonNkwenti/youtube-transcriber/issues"
+  },
+  "homepage": "https://github.com/FonNkwenti/youtube-transcriber#readme",
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^26.4.0"
+  }
+}
