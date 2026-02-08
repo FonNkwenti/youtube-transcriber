@@ -28,16 +28,17 @@ h1, h2, h3, p {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem; /* Remove top padding here */
     box-sizing: border-box;
-    /* Add padding for traffic lights on Mac since we use hiddenInset */
-    padding-top: 3rem; 
 }
 
 header {
     text-align: center;
+    padding-top: 3rem; /* Add padding for traffic lights here */
     margin-bottom: 2.5rem;
     -webkit-app-region: drag; /* Allow window dragging */
+    -webkit-user-select: none; /* Prevent text selection during drag */
+    user-select: none;
 }
 
 header h1, header p {

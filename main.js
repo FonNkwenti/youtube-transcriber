@@ -19,7 +19,10 @@ function createWindow() {
     },
     titleBarStyle: 'hiddenInset',
     backgroundColor: '#1e1e1e',
-    show: false // Don't show until ready-to-show
+    show: false, // Don't show until ready-to-show
+    movable: true,
+    resizable: true,
+    center: true
   });
 
   mainWindow.loadFile('index.html');
